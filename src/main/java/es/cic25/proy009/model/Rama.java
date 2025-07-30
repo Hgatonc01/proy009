@@ -1,5 +1,7 @@
 package es.cic25.proy009.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,7 +22,8 @@ public class Rama {
     private double longitud;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "arbolId")
+    @JsonIgnore
     private Arbol arbol;
 
     public Long getId() {
