@@ -54,7 +54,7 @@ public class ArbolController {
         if(arbol.getId() == null){
             throw new CreacionSecurityException();
         }
-        return arbolService.createArbol(arbol);
+        return arbolService.updateArbol(arbol);
     }
 
     @DeleteMapping("/{id}")
